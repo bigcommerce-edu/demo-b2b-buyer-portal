@@ -35,7 +35,7 @@ export interface RouteItem extends RouteItemBasic {
 
 const {
   dashboardPermissions,
-  // TODO: Add `overviewPermissions` to the destructuring
+  overviewPermissions,
   ordersPermissions,
   companyOrdersPermissions,
   invoicePermissions,
@@ -53,7 +53,7 @@ const {
 } = legacyPermissions;
 
 const {
-  // TODO: Add `overviewPermissionsCodes` to the destructuring
+  overviewPermissionCodes,
   ordersPermissionCodes,
   companyOrdersPermissionCodes,
   invoicePermissionCodes,
