@@ -64,6 +64,7 @@
   "global.quoteStatusCode.ordered": "Ordered",
   "global.quoteStatusCode.expired": "Expired",
   "global.navMenu.dashboard": "Dashboard",
+  "global.navMenu.overview": "Overview",
   "global.navMenu.orders": "My orders",
   "global.navMenu.companyOrders": "Company orders",
   "global.navMenu.invoice": "Invoices",
