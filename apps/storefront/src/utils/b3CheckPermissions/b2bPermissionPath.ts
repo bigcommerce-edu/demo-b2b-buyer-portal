@@ -9,6 +9,8 @@ const hasPermission = (key: keyof B2BPermissionsMapParams): boolean => {
 };
 
 export const b2bJumpPath = (role: number): string => {
+  // TODO: Make Overview the new default page as long as the user has the appropriate permission
+
   if (role === CustomerRole.JUNIOR_BUYER) {
     return PATH_ROUTES.SHOPPING_LISTS;
   }
