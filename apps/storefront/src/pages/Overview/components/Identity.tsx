@@ -1,3 +1,4 @@
+import { useAppSelector } from "@/store";
 import { 
   Box,
   Card,
@@ -22,10 +23,10 @@ const IdentityCard = styled(Card)({
 });
 
 export default function Identity() {
-  // TODO: Use `useAppSelector` to get state from the `company` slice
-  //  - Use destructuring to get `customer` and `companyInfo`
-  //  - Use destructuring to get `companyName` from `companyInfo`
-  //  - Use destructuring to get `firstName`, `lastName`, and `companyRoleName` from `customer`
+  const company = useAppSelector(({ company }) => company);
+  const { companyInfo, customer } = company;
+  const { companyName } = companyInfo;
+  const { firstName, lastName, companyRoleName } = customer;
 
   return <>
     <Box
@@ -47,8 +48,7 @@ export default function Identity() {
             <CardHeader title="User" />
             <CardContent>
               <PersonIcon fontSize="large" color="primary" />
-              {/* TODO: Display the `firstName` and `lastName` from the `customer` state */}
-              <Typography variant="body1" fontWeight="bold">Name placeholder</Typography>
+              <Typography variant="body1" fontWeight="bold">{firstName} {lastName}</Typography>
             </CardContent>
           </IdentityCard>
         </Grid>
@@ -57,8 +57,7 @@ export default function Identity() {
             <CardHeader title="Company" />
             <CardContent>
               <BusinessIcon fontSize="large" color="primary" />
-              {/* TODO: Display the `companyName` from the `companyInfo` state */}
-              <Typography variant="body1" fontWeight="bold">Company placeholder</Typography>
+              <Typography variant="body1" fontWeight="bold">{companyName}</Typography>
             </CardContent>
           </IdentityCard>
         </Grid>
@@ -67,8 +66,7 @@ export default function Identity() {
             <CardHeader title="Role" />
             <CardContent>
               <SecurityIcon fontSize="large" color="primary" />
-              {/* TODO: Display the `companyRoleName` from the `customer` state */}
-              <Typography variant="body1" fontWeight="bold">Role placeholder</Typography>
+              <Typography variant="body1" fontWeight="bold">{companyRoleName}</Typography>
             </CardContent>
           </IdentityCard>
         </Grid>
