@@ -6,6 +6,7 @@ import {
 import { type SetOpenPage } from '@/pages/SetOpenPage';
 import { HeadlessRoutes } from "@/constants";
 import Identity from "./components/Identity";
+import RecentOrders from "./components/RecentOrders";
 
 interface OverviewProps {
   setOpenPage: SetOpenPage;
@@ -21,7 +22,9 @@ export default function Overview({
       <Card sx={{ padding: '20px' }}>
         <Identity />
 
-        {/* TODO: Add box with `RecentOrders` component */}
+        <Box>
+          <RecentOrders setOpenPage={setOpenPage} />
+        </Box>
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
