@@ -18,7 +18,10 @@ export default function Overview({
   return (
     <>
       <Card sx={{ padding: '20px' }}>
+        {/* TODO: Replace "hello world" with the `Identity` component */}
         <h3>Hello World!</h3>
+
+        {/* TODO: Add box with `RecentOrders` component */}
 
         <Box sx={{ textAlign: 'center' }}>
           <Button
