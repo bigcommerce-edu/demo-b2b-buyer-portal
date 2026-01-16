@@ -5,6 +5,7 @@ import {
 } from "@mui/material";
 import { type SetOpenPage } from '@/pages/SetOpenPage';
 import { HeadlessRoutes } from "@/constants";
+import Identity from "./components/Identity";
 
 interface OverviewProps {
   setOpenPage: SetOpenPage;
@@ -18,8 +19,7 @@ export default function Overview({
   return (
     <>
       <Card sx={{ padding: '20px' }}>
-        {/* TODO: Replace "hello world" with the `Identity` component */}
-        <h3>Hello World!</h3>
+        <Identity />
 
         {/* TODO: Add box with `RecentOrders` component */}
 
