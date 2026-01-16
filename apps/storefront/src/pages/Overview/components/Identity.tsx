@@ -22,6 +22,11 @@ const IdentityCard = styled(Card)({
 });
 
 export default function Identity() {
+  // TODO: Use `useAppSelector` to get state from the `company` slice
+  //  - Use destructuring to get `customer` and `companyInfo`
+  //  - Use destructuring to get `companyName` from `companyInfo`
+  //  - Use destructuring to get `firstName`, `lastName`, and `companyRoleName` from `customer`
+
   return <>
     <Box
       sx={{
@@ -42,6 +47,7 @@ export default function Identity() {
             <CardHeader title="User" />
             <CardContent>
               <PersonIcon fontSize="large" color="primary" />
+              {/* TODO: Display the `firstName` and `lastName` from the `customer` state */}
               <Typography variant="body1" fontWeight="bold">Name placeholder</Typography>
             </CardContent>
           </IdentityCard>
@@ -51,6 +57,7 @@ export default function Identity() {
             <CardHeader title="Company" />
             <CardContent>
               <BusinessIcon fontSize="large" color="primary" />
+              {/* TODO: Display the `companyName` from the `companyInfo` state */}
               <Typography variant="body1" fontWeight="bold">Company placeholder</Typography>
             </CardContent>
           </IdentityCard>
@@ -60,6 +67,7 @@ export default function Identity() {
             <CardHeader title="Role" />
             <CardContent>
               <SecurityIcon fontSize="large" color="primary" />
+              {/* TODO: Display the `companyRoleName` from the `customer` state */}
               <Typography variant="body1" fontWeight="bold">Role placeholder</Typography>
             </CardContent>
           </IdentityCard>
