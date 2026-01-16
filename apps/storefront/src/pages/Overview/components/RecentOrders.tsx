@@ -7,7 +7,6 @@ import {
 import { B3Table } from "@/components/table/B3Table";
 import B3Spin from "@/components/spin/B3Spin";
 import { type SetOpenPage } from '@/pages/SetOpenPage';
-import { useAppSelector } from "@/store";
 import { displayFormat } from "@/utils/b3DateFormat";
 import { currencyFormat } from "@/utils/b3CurrencyFormat";
 
@@ -24,13 +23,9 @@ export default function RecentOrders({
   const [orders, setOrders] = useState<OverviewOrder[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const company = useAppSelector(({ company }) => company);
-  const { tokens } = company;
-  const { B2BToken } = tokens;
-
   useEffect(() => {
     // When the component mounts, fetch the recent orders and store in state
-    getRecentOrders(B2BToken).then((b2bOrders) => {
+    getRecentOrders().then((b2bOrders) => {
       setOrders(b2bOrders);
       setLoading(false);
     });
